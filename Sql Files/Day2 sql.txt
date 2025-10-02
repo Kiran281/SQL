@@ -1,0 +1,644 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 8.0.43 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> Select 10;
++----+
+| 10 |
++----+
+| 10 |
++----+
+1 row in set (0.00 sec)
+
+mysql> select 10 as num;
++-----+
+| num |
++-----+
+|  10 |
++-----+
+1 row in set (0.01 sec)
+
+
+mysql> Select "Hello mysql";
++-------------+
+| Hello mysql |
++-------------+
+| Hello mysql |
++-------------+
+1 row in set (0.01 sec)
+
+
+
+mysql> Select "Hello mysql" as msg;
++-------------+
+| msg         |
++-------------+
+| Hello mysql |
++-------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> Select "mysql 8.0" as version;
++-----------+
+| version   |
++-----------+
+| mysql 8.0 |
++-----------+
+1 row in set (0.00 sec)
+
+
+
+mysql> Select "mysql 8.0" as version , "Hello mysql" as msg;
++-----------+-------------+
+| version   | msg         |
++-----------+-------------+
+| mysql 8.0 | Hello mysql |
++-----------+-------------+
+1 row in set (0.01 sec)
+
+
+
+
+mysql> select date('2025-10-01');
++--------------------+
+| date('2025-10-01') |
++--------------------+
+| 2025-10-01         |
++--------------------+
+1 row in set (0.01 sec)
+
+
+
+
+mysql> select date('2025-10-01') as  date;
++------------+
+| date       |
++------------+
+| 2025-10-01 |
++------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> select time('09:30:01') as  time;
++----------+
+| time     |
++----------+
+| 09:30:01 |
++----------+
+1 row in set (0.01 sec)
+
+
+
+
+mysql> select timestamp('2025-10-01 09:30:01') as  Datetime;
++---------------------+
+| Datetime            |
++---------------------+
+| 2025-10-01 09:30:01 |
++---------------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> SELECT TRUE;
++------+
+| TRUE |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT FALSE;
++-------+
+| FALSE |
++-------+
+|     0 |
++-------+
+1 row in set (0.01 sec)
+
+
+
+mysql> SELECT NULL as none;
++------+
+| none |
++------+
+| NULL |
++------+
+1 row in set (0.00 sec)
+
+
+
+mysql> select 5+4 as sum
+    -> ;
++-----+
+| sum |
++-----+
+|   9 |
++-----+
+1 row in set (0.01 sec)
+
+
+
+mysql> select "5" + "4" as sum
+    -> ;
++-----+
+| sum |
++-----+
+|   9 |
++-----+
+1 row in set (0.01 sec)
+
+
+
+mysql> SELECT 10 - 3 AS sub_result;
++------------+
+| sub_result |
++------------+
+|          7 |
++------------+
+1 row in set (0.00 sec)
+
+
+mysql> SELECT 5 * 4 AS mul_result;
++------------+
+| mul_result |
++------------+
+|         20 |
++------------+
+1 row in set (0.00 sec)
+
+
+mysql> SELECT '2025 -10-06' AS date;
++-------------+
+| date        |
++-------------+
+| 2025 -10-06 |
++-------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> SELECT  date '711001' AS date;
++------------+
+| date       |
++------------+
+| 1971-10-01 |
++------------+
+1 row in set (0.01 sec)
+
+
+
+mysql> SELECT  date '1971@10@01' AS date;
++------------+
+| date       |
++------------+
+| 1971-10-01 |
++------------+
+1 row in set, 1 warning (0.01 sec)
+
+
+
+mysql> SELECT  date '20@10@28' AS date;
++------------+
+| date       |
++------------+
+| 2020-10-28 |
++------------+
+1 row in set, 1 warning (0.00 sec)
+
+
+
+mysql> SELECT  date '28@10@28' AS date;
++------------+
+| date       |
++------------+
+| 2028-10-28 |
++------------+
+1 row in set, 1 warning (0.00 sec)
+
+
+
+mysql> SELECT  date '20-10-28' AS date;
++------------+
+| date       |
++------------+
+| 2020-10-28 |
++------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> SELECT  if(true=0 ,"true" ,"false");
++-----------------------------+
+| if(true=0 ,"true" ,"false") |
++-----------------------------+
+| false                       |
++-----------------------------+
+1 row in set (0.01 sec)
+
+
+
+
+
+mysql> SELECT  IF(true=0 ,"true" ,"false");
++-----------------------------+
+| IF(true=0 ,"true" ,"false") |
++-----------------------------+
+| false                       |
++-----------------------------+
+
+
+1 row in set (0.00 sec)
+
+mysql> SELECT  IF(true=1 ,"true" ,"false");
++-----------------------------+
+| IF(true=1 ,"true" ,"false") |
++-----------------------------+
+| true                        |
++-----------------------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> SELECT  IF(false=1 ,"true" ,"false");
++------------------------------+
+| IF(false=1 ,"true" ,"false") |
++------------------------------+
+| false                        |
++------------------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT  IF(false=0 ,"true" ,"false");
++------------------------------+
+| IF(false=0 ,"true" ,"false") |
++------------------------------+
+| true                         |
++------------------------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> select 6788.9 as price;
++--------+
+| price  |
++--------+
+| 6788.9 |
++--------+
+1 row in set (0.01 sec)
+
+
+
+mysql> select 56.90 as weight;
++--------+
+| weight |
++--------+
+|  56.90 |
++--------+
+1 row in set (0.01 sec)
+
+
+
+mysql> select "An alias is a temporary name given to a table or column in a SQL query. we use  AS for that " as defination;
++----------------------------------------------------------------------------------------------+
+| defination                                                                                   |
++----------------------------------------------------------------------------------------------+
+| An alias is a temporary name given to a table or column in a SQL query. we use  AS for that  |
++----------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> select 'An alias is a temporary name given to a table or column in a SQL query. we use  "AS" for that ' as defination;
+
++------------------------------------------------------------------------------------------------+
+| defination                                                                                     |
++------------------------------------------------------------------------------------------------+
+| An alias is a temporary name given to a table or column in a SQL query. we use  "AS" for that  |
++------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT "Hello, alias is temporary name, we use ""AS"" for alias" AS example_text;
++-------------------------------------------------------+
+| example_text                                          |
++-------------------------------------------------------+
+| Hello, alias is temporary name, we use "AS" for alias |
++-------------------------------------------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT "Cyber shakti :kamlini, komal, komal, kiran, kalyani, khetesh, koushal, kapitl, jaydeep, ishan" AS team_member;
++-----------------------------------------------------------------------------------------------+
+| team_member                                                                                   |
++-----------------------------------------------------------------------------------------------+
+| Cyber shakti :kamlini, komal, komal, kiran, kalyani, khetesh, koushal, kapitl, jaydeep, ishan |
++-----------------------------------------------------------------------------------------------+
+
+
+mysql> create table student
+    -> (
+    -> roll_no int,
+    -> FirstName varchar(255),
+    -> LastName varchar(255),
+    -> AddressLine varchar(255),
+    -> Email varchar(255),
+    -> Section char(20)
+    -> );
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> select * from student;
+Empty set (0.02 sec)
+
+mysql> desc student;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| roll_no     | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| Section     | char(20)     | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.03 sec)
+
+
+mysql> create database Team9;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database  if not exists Mydemo;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database Hobbies;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> drop database Hobbies;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> drop database  if exists Mydemo;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show databases;
+    
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydatabase         |
+| mydb               |
+| mysql              |
+| performance_schema |
+| practice           |
+| schooldb           |
+| sys                |
+| team9              |
++--------------------+
+9 rows in set (0.00 sec)
+
+//---------------------------------insert --------------------------------------------
+
+mysql>mysql> insert into studentdata(roll_no , FirstName, LastName, AddressLine, Email, Section) values(1,"kiran" , "mahajan" , "Mp" , "kiran@123" , "A");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from studentdata;
++---------+-----------+----------+-------------+-----------+---------+
+| roll_no | FirstName | LastName | AddressLine | Email     | Section |
++---------+-----------+----------+-------------+-----------+---------+
+|       1 | kiran     | mahajan  | Mp          | kiran@123 | A       |
++---------+-----------+----------+-------------+-----------+---------+
+1 row in set (0.00 sec)
+
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydatabase         |
+| mydb               |
+| mysql              |
+| performance_schema |
+| practice           |
+| schooldb           |
+| sys                |
+| team9              |
+| teamcybershakti    |
++--------------------+
+10 rows in set (0.01 sec)
+
+mysql> use team9;
+Database changed
+mysql> show tables;
++-----------------+
+| Tables_in_team9 |
++-----------------+
+| team9data       |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> INSERT INTO team9data (roll_no, FirstName, LastName, AddressLine, Email, Section)
+    -> VALUES
+    -> (1, 'Kiran', 'Mahajan', 'MP', 'kiran.mahajan@example.com', 'A'),
+    -> (2, 'Komal', 'Jadhav', 'Maharashtra', 'komal.jadhav@example.com', 'A'),
+    -> (3, 'Komal', 'Kadnor', 'Solapur', 'komal.kadnor@example.com', 'A'),
+    -> (4, 'Kalyani', 'Pachghare', 'Amravati', 'kalyani.pachghare@example.com', 'A'),
+    -> (5, 'Kamlini', 'Bhasne', 'Pune', 'kamlini.bhasne@example.com', 'A');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> desc team9data;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| roll_no     | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| Section     | char(20)     | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select * from team9data;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | Kiran     | Mahajan   | MP          | kiran.mahajan@example.com     | A       |
+|       2 | Komal     | Jadhav    | Maharashtra | komal.jadhav@example.com      | A       |
+|       3 | Komal     | Kadnor    | Solapur     | komal.kadnor@example.com      | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
+|       5 | Kamlini   | Bhasne    | Pune        | kamlini.bhasne@example.com    | A       |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+5 rows in set (0.00 sec)
+
+//------------insert --------------------------------------
+
+mysql> INSERT INTO studentdata (roll_no, FirstName, LastName, AddressLine,  Section)
+    -> VALUES
+    -> (3, 'siya', 'mahajan',  'Mp', 'A');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from  studentdata;
++---------+-----------+----------+-------------+-----------+---------+
+| roll_no | FirstName | LastName | AddressLine | Email     | Section |
++---------+-----------+----------+-------------+-----------+---------+
+|       1 | kiran     | mahajan  | Mp          | kiran@123 | A       |
+|       3 | siya      | mahajan  | Mp          | NULL      | A       |
++---------+-----------+----------+-------------+-----------+---------+
+2 rows in set (0.00 sec)
+
+
+//---------------------------Truncate-----------------------------------
+
+mysql> select * from team9data;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | Kiran     | Mahajan   | MP          | kiran.mahajan@example.com     | A       |
+|       2 | Komal     | Jadhav    | Maharashtra | komal.jadhav@example.com      | A       |
+|       3 | Komal     | Kadnor    | Solapur     | komal.kadnor@example.com      | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
+|       5 | Kamlini   | Bhasne    | Pune        | kamlini.bhasne@example.com    | A       |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> truncate table team9data;
+Query OK, 0 rows affected (0.06 sec)
+
+
+//----------------------select ---------------------------------------
+mysql> select * from team9data;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | Kiran     | Mahajan   | MP          | kiran.mahajan@example.com     | A       |
+|       2 | Komal     | Jadhav    | Maharashtra | komal.jadhav@example.com      | A       |
+|       3 | Komal     | Kadnor    | Solapur     | komal.kadnor@example.com      | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
+|       5 | Kamlini   | Bhasne    | Pune        | kamlini.bhasne@example.com    | A       |
++---------+-----------+-----------+--------------+------------------------------+---------+
+5 rows in set (0.00 sec)
+
+
+mysql> select roll_no from team9data;
++---------+
+| roll_no |
++---------+
+|       1 |
+|       2 |
+|       3 |
+|       4 |
+|       5 |
++---------+
+5 rows in set (0.00 sec)
+
+
+mysql> select roll_no , AddressLine as city from team9data;
++---------+-------------+
+| roll_no | city        |
++---------+-------------+
+|       1 | MP          |
+|       2 | Maharashtra |
+|       3 | Solapur     |
+|       4 | Amravati    |
+|       5 | Pune        |
++---------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from team9data where roll_no = 1;
++---------+-----------+----------+-------------+---------------------------+---------+
+| roll_no | FirstName | LastName | AddressLine | Email                     | Section |
++---------+-----------+----------+-------------+---------------------------+---------+
+|       1 | Kiran     | Mahajan  | MP          | kiran.mahajan@example.com | A       |
++---------+-----------+----------+-------------+---------------------------+---------+
+1 row in set (0.01 sec)
+
+
+
+//---------------------------------update--------------------------------------
+mysql> update team9data
+    -> set Section = 'B'
+    -> where roll_No = 6;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> select * from team9data ;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | Kiran     | Mahajan   | MP          | kiran.mahajan@example.com     | A       |
+|       2 | Komal     | Jadhav    | Maharashtra | komal.jadhav@example.com      | A       |
+|       3 | Komal     | Kadnor    | Solapur     | komal.kadnor@example.com      | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
+|       5 | Kamlini   | Bhasne    | Pune        | kamlini.bhasne@example.com    | A       |
+|       6 | Khetesh   | Choudhary | Mumbai      | khetesh@exampl.com            | B       |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+6 rows in set (0.00 sec)
+
+
+mysql> update team9data
+    -> SET AddressLine = 'Nagpur', Email = 'komal.jadhav@newmail.com'
+    -> WHERE ROLL_NO = 7;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+
+
+
+//--------------------------delete---------------------
+
+mysql> select * from studentdata;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | kiran     | mahajan   | Mp          | kiran@123                     | A       |
+|       3 | siya      | mahajan   | Mp          | NULL                          | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+3 rows in set (0.00 sec)
+
+
+mysql> DELETE FROM studentdata
+    -> WHERE roll_no = 3;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from studentdata;
++---------+-----------+-----------+-------------+-------------------------------+---------+
+| roll_no | FirstName | LastName  | AddressLine | Email                         | Section |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+|       1 | kiran     | mahajan   | Mp          | kiran@123                     | A       |
+|       4 | Kalyani   | Pachghare | Amravati    | kalyani.pachghare@example.com | A       |
++---------+-----------+-----------+-------------+-------------------------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> DELETE FROM studentdata;
+Query OK, 2 rows affected (0.01 sec)
+
+mysql> select * from studentdata;
+Empty set (0.00 sec)
+
+
